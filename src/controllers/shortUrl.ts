@@ -7,7 +7,7 @@ export const createUrl = async (
 ) =>{
     try {
         console.log("The fullUrl is ", req.body.fullUrl);
-        const { fullUrl } = req.body
+        const { fullUrl } = req.body;
         const urlFound = await urlModel.find({ fullUrl })
         if(urlFound.length > 0) {
             res.status(409)
@@ -17,6 +17,7 @@ export const createUrl = async (
             res.status(201).send(shortUrl);
         }
     } catch (error) {
+        console.log(error)
         res.status(500).send({message: "Something went wrong!"})
     }
 };
