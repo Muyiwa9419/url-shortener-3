@@ -3,14 +3,14 @@ import { UrlData } from '../../interface/UrlData';
 import { Link } from 'react-router-dom';
 import { serverUrl } from '../../helpers/Constant';
 import axios from 'axios';
-// import heroicons from 'https://cdn.jsdelivr.net/npm/heroicons@2.1.5/+esm'
 
 interface IDataTableProps {
    data: UrlData[];
+   updateReloadState: () => void;
 }
 
 const DataTable: React.FunctionComponent<IDataTableProps> = (props) => {
- const {data} = props;
+ const {data, updateReloadState} = props;
  console.log('Data in DataTable is ', data);
     const renderTableData = () => {
         return data.map((item) => {
@@ -66,6 +66,7 @@ const DataTable: React.FunctionComponent<IDataTableProps> = (props) => {
  const deleteUrl = async (id:string) => {
     const response = await axios.delete(`${serverUrl}/shortUrl/${id}`);
     console.log(response)
+    updateReloadState();
  };
     return (
     <div className='container mx-auto pt-2 pb-10'>
