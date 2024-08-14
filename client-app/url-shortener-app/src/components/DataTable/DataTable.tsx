@@ -14,7 +14,7 @@ const DataTable: React.FunctionComponent<IDataTableProps> = (props) => {
  console.log('Data in DataTable is ', data);
     const renderTableData = () => {
         return data.map((item) => {
-            return(
+            return (
                 <tr key={item._id} 
                 className='border-b text-white bg-gray-600 hover:bg-white hover:text-gray-800'>
                     <td className='px-6 py-3 break-words'>
