@@ -4,9 +4,9 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "type":"module",
+    "type": "module",
     "build": "npx tsc",
-    "start": "npx tsc && node ./dist/server.js",
+    "start": "npx tsc && node ./dist/server.ts",
     "dev": "nodemon"
   },
   "keywords": [],
@@ -28,7 +28,6 @@
     "@types/mongoose": "^5.11.97",
     "@types/node": "^22.0.2",
     "@types/nodemon": "^1.19.6",
-    "nodemon": "^3.1.4",
     "ts-node": "^10.9.2",
     "typescript": "^5.5.4"
   }
