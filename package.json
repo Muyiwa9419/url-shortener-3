@@ -6,7 +6,7 @@
   "scripts": {
     "type": "module",
     "build": "npx tsc",
-    "start": "npx tsc && node ./dist/server.ts",
+    "start": "npx tsc && node ./dist/server.js",
     "dev": "nodemon"
   },
   "keywords": [],
